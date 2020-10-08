@@ -1,4 +1,4 @@
-module "iam_role_s3" {
+module "RDS" {
 source = "./module/"
 
 vpc_name = "main"
@@ -25,18 +25,18 @@ db_subnet_group_description = "RDS subnet group"
 
 db_parameter_group_name = "mariadb-parameters"
 db_parameter_group_description = "MariaDB parameter group"
-db_parameter_group_family = "mariadb10.1"
+db_parameter_group_family = "mariadb10.4"
 parameter_name = "max_allowed_packet"
 parameter_value = "16777216"
 
 db_instance_allocated_storage = "20"
 db_instance_engine = "mariadb"
-db_instance_engine_version = "10.1.14"
+db_instance_engine_version = "10.4.8"
 db_instance_class = "db.t2.micro"
 db_instance_identifier = "mariadb"
 db_instance_name = "mariadb"
 db_instance_username = "root"
-db_instance_password = ""
+db_instance_password = "testing1"
 db_instance_storage_type = "gp2"
 db_instance_backup_retention_period = "30"
 db_instance_tag_name = "mariadb-instance"

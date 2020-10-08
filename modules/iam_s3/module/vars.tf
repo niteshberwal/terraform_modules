@@ -3,11 +3,11 @@ variable "AWS_REGION" {
 }
 
 variable "PATH_TO_PRIVATE_KEY" {
-  default = "/root/Terraform/terraform_testing/git/modules/iam_s3/module/mykey"
+  default = "~/.ssh/id_rsa"
 }
 
 variable "PATH_TO_PUBLIC_KEY" {
-  default = "/root/Terraform/terraform_testing/git/modules/iam_s3/module/mykey.pub"
+  default = "~/.ssh/id_rsa.pub"
 }
 
 variable "public_subnets" {}
